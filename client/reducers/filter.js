@@ -2,5 +2,10 @@ const initialState = 'SHOW_ALL';
 
 
 export default (state = initialState, action) => {
-    return state;
+    switch(action.type) {
+        case 'CHANGE_FILTER':
+            return action.filter;
+        default:
+            return state;
+    }
 }

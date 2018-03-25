@@ -4,7 +4,20 @@ import Todo from './Todo';
 export default class TodoList extends React.Component {
 
     render() {
-        const {todos, onTodoCLick} = this.props;
+        const { filter, onTodoCLick} = this.props;
+        let { todos } = this.props;
+
+        if (filter === 'SHOW_OPENED') {
+            todos = todos.filter(todo => {
+                return (todo.status === 'active');
+            });
+        }
+
+        if (filter === 'SHOW_COMPLETED') {
+            todos = todos.filter(todo => {
+                return (todo.status === 'closed');
+            });
+        }
         
         return (
             <div className="todos list-group">

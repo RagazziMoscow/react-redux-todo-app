@@ -12,7 +12,7 @@ const initialState = [
     {
         id: 3,
         text: 'Создать приложение с Redux',
-        status: 'work'
+        status: 'closed'
     }
 ];
 

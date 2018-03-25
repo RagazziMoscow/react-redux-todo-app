@@ -1,10 +1,13 @@
-.todos, .add-todo {
-    width: 55%;
-    margin: 0 auto;
+.title {
+    text-align: center;
 }
 
-.add-todo {
-    margin-top: 100px;
+
+.todos,
+.add-todo,
+.filter {
+    width: 55%;
+    margin: 70px auto 0 auto;
 }
 
 .todo__action {

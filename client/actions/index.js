@@ -11,3 +11,10 @@ export function addTodo(todo) {
         todo
     };
 }
+
+export function changeFilter(filter) {
+    return {
+        type: 'CHANGE_FILTER',
+        filter
+    };
+}
