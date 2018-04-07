@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 import VisibleTodoList from './../containers/VisibleTodoList';
 import Filter from '../containers/Filter';
-import AddTodo from '../containers/AddTodo';
+import VisibleAddTodo from '../containers/VisibleAddTodo';
 
 export default class App extends Component {
     render() {
@@ -11,7 +11,7 @@ export default class App extends Component {
                 <h3 className="title">Приложение todo</h3>
                 <VisibleTodoList />
                 <Filter />
-                <AddTodo />
+                <VisibleAddTodo />
             </div>
         );
     }

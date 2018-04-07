@@ -1,14 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
 
-import { addTodo } from '../actions';
-
-class AddTodo extends React.Component {
+export default class AddTodo extends React.Component {
     constructor(props, context) {
         super(props, context);
 
         this.state = {
-            lastId: props.lastId,
             content: ''
         };
         this.onContentChange = this.onContentChange.bind(this);
@@ -19,10 +15,10 @@ class AddTodo extends React.Component {
         this.setState({content: e.target.value});
     }
     onClickTodo(e) {
-        const { addTodo } = this.props;
+        const { addTodo, length } = this.props;
         const text = this.state.content;
         const todo = {
-            id: ++this.state.lastId,
+            id: length + 1,
             text,
             status: 'active'
         };
@@ -51,23 +47,3 @@ class AddTodo extends React.Component {
         );
     }
 }
-
-
-const mapStateToProps = (state) => {
-    return {
-        lastId: state.todos[state.todos.length - 1].id
-    };
-}
-
-
-const mapDispatchToProps = (dispatch) => {
-    return{
-        addTodo: (todo) => {
-            dispatch(addTodo(todo));
-        }
-    };
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(AddTodo);
-
-

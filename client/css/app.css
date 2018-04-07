@@ -1,13 +1,20 @@
-.title {
+.title,
+.todos-not-loaded
+{
     text-align: center;
 }
 
 
 .todos,
+.todos-not-loaded,
 .add-todo,
 .filter {
     width: 55%;
     margin: 70px auto 0 auto;
+}
+
+.filter div {
+    margin:  0 auto;
 }
 
 .todo__action {
