@@ -1,7 +1,4 @@
-import { TOGGLE_TODO_STATUS } from '../constants';
-import { ADD_TODO } from '../constants';
-import { CHANGE_FILTER } from '../constants';
-import { FETCH_TODOS } from '../constants';
+import { TOGGLE_TODO_STATUS, ADD_TODO, CHANGE_FILTER, FETCH_TODOS } from '../constants';
 
 export function toggleTodo(index) {
     return {
